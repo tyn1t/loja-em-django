@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Iniciar o Chrome em relação a localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "SWA: Run frontend",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:4280",
+            "preLaunchTask": "swa: start frontend",
+            "webRoot": "${workspaceFolder}/frontend",
+            "timeout": 30000
+        },
+        {
+            "type": "node-terminal",
+            "name": "Executar Script: start",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}\\frontend"
+        }
+    ]
+}
